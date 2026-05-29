@@ -63,6 +63,7 @@ export default {
     footer: {
       rights: 'Todos los derechos reservados',
       developed: 'Desarrollado por',
+      privacyPolicy: 'Política de Privacidad',
     },
   },
   home: {

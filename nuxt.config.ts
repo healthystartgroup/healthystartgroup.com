@@ -81,6 +81,10 @@ export default defineNuxtConfig({
         en: '/articles',
         es: '/articulos',
       },
+      'privacy-policies': {
+        en: '/privacy-policies',
+        es: '/politicas-de-privacidad',
+      },
     },
   },
 });

@@ -82,11 +82,22 @@ function transformArticle(item: any, locale: string) {
   };
 }
 
+function transformLegalPage(item: any, locale: string) {
+  const t = getTranslation(item, locale);
+  return {
+    slug: item.slug,
+    lastUpdated: item.last_updated,
+    title: t.title,
+    body: t.body,
+  };
+}
+
 const transformers: Record<string, (item: any, locale: string) => any> = {
   services: transformService,
   testimonials: transformTestimonial,
   staff: transformStaff,
   articles: transformArticle,
+  legal_pages: transformLegalPage,
 };
 
 export function useDirectusCollection<T = any>(

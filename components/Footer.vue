@@ -30,9 +30,9 @@ const localePath = useLocalePath();
         <div class="flex flex-col lg:flex-row items-center justify-between space-y-5 md:space-y-0 md:space-x-10">
           <NuxtLink
             :to="localePath('/privacy-policies')"
-            class="text-white text-lg hover:underline hover:text-secondary font-meidum underline-offset-4 font-normal"
+            class="text-white text-lg hover:underline hover:text-secondary font-medium underline-offset-4 font-normal"
           >
-            Privacy Policy
+            {{ footer?.privacyPolicy }}
           </NuxtLink>
 
           <LangSwitcher />
