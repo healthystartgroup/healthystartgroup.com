@@ -1,8 +1,7 @@
 <script setup>
     const { data: page } = useI18nResource('services');
-    const { data: services } = await useLocalizedCollection('services', {
+    const { data: services } = await useDirectusCollection('services', {
         key: 'services',
-        limit: -1,
     });
 
     const { locale } = useI18n();

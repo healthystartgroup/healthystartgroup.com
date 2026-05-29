@@ -6,25 +6,9 @@ defineProps({
   },
 });
 
-const { locale } = useI18n();
-
-const testimonialsCollection = computed(() => `testimonials_${locale.value}`);
-
-const { data: testimonialsEntries } = await useAsyncData(
-  'section-testimonials',
-  async () => {
-    let entries = await queryCollection(testimonialsCollection.value).all();
-
-    if ((!entries || entries.length === 0) && locale.value !== 'en') {
-      entries = await queryCollection('testimonials_en').all();
-    }
-
-    return entries ?? [];
-  },
-  {
-    watch: [testimonialsCollection],
-  }
-);
+const { data: testimonialsEntries } = await useDirectusCollection('testimonials', {
+  key: 'section-testimonials',
+});
 
 const testimonials = computed(() => {
   const entries = testimonialsEntries.value;

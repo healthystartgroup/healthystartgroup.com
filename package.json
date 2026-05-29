@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@directus/sdk": "^21.3.0",
     "@nuxt/content": "^3.7.1",
     "@nuxtjs/i18n": "^10.1.0",
     "@nuxtjs/seo": "^3.2.2",

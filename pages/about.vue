@@ -1,6 +1,6 @@
 <script setup>
     const { data: page } = useI18nResource('about');
-    const { data: staff } = await useLocalizedCollection('staff', {
+    const { data: staff } = await useDirectusCollection('staff', {
         key: 'staff',
     });
 

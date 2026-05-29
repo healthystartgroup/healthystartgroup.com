@@ -10,6 +10,12 @@ export default defineNuxtConfig({
     plugins: [tailwindcss()],
   },
 
+  runtimeConfig: {
+    public: {
+      directusUrl: process.env.DIRECTUS_URL || 'https://admin.healthystartgroup.com',
+    },
+  },
+
   app: {
     head: {
       titleTemplate: '%s',

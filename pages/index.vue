@@ -2,7 +2,7 @@
 const { data: page } = useI18nResource('home');
 const localePath = useLocalePath();
 
-const { data: services } = await useLocalizedCollection('services', {
+const { data: services } = await useDirectusCollection('services', {
   key: 'home-services',
 });
 
